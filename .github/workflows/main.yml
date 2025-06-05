@@ -187,7 +187,7 @@ jobs:
             echo "Final URL: ${REPO_PREFIX}${PRIVATE_SOURCE}"
       
             # Clone the private repository using the dynamic prefix
-            git clone --recursive --branch ${{ github.event.inputs.kernelBranch }} \
+            git clone --recursive \
               "$REPO_PREFIX$PRIVATE_SOURCE" ${{ env.kernelName }} --depth=1
           else
             # Clone the public repository directly
