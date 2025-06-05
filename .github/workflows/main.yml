@@ -191,7 +191,7 @@ jobs:
               "$REPO_PREFIX$PRIVATE_SOURCE" ${{ env.kernelName }} --depth=1
           else
             # Clone the public repository directly
-            git clone --recursive --branch ${{ github.event.inputs.kernelBranch }} \
+            git clone --recursive \
               ${{ github.event.inputs.kernelSourceURL }} ${{ env.kernelName }} --depth=1
           fi
 
